@@ -1,0 +1,29 @@
+{
+  "name": "urbana-crimes-visualization",
+  "version": "1.0.0",
+  "description": "Visualization of crimes occured in Urbana IL",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariano-filipe/urbana-crimes-visualization.git"
+  },
+  "keywords": [
+    "Urbana",
+    "Crime",
+    "Visualization"
+  ],
+  "author": "Filipe Mariano Freire da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariano-filipe/urbana-crimes-visualization/issues"
+  },
+  "homepage": "https://github.com/mariano-filipe/urbana-crimes-visualization#readme",
+  "dependencies": {
+    "csv-parser": "^2.1.0",
+    "d3": "^5.7.0",
+    "moment": "^2.23.0"
+  }
+}

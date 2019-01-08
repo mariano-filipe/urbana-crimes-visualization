@@ -1,0 +1,277 @@
+body {
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+/************ Reusable CSS classes */
+.row {
+    display: flex;
+    /* padding: 2px; */
+}
+
+.col {
+    flex: 1;
+    /* padding: 1em; */
+}
+
+.input-group {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.input-group>div {
+    display: table-cell;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+    /* needed for Safari */
+}
+
+.input-group-icon {
+    background: #eee;
+    color: #777;
+    padding: 0 12px
+}
+
+.input-group-area {
+    width: 100%;
+}
+
+.input-group input {
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 8px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.axis--x-label {
+    font: 10px sans-serif;
+    fill: #777;
+}
+
+.axis--y-label {
+    font: 10px sans-serif;
+    fill: #777;
+}
+
+/************ Config panel CSS */
+#config-panel {
+    /* max-width: 400px;
+    min-width: 200px; */
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 1px solid #CFCFCF;
+    background-color: #F0F0F0;
+    border-radius: 10px 0 0 10px;
+}
+
+#config-panel-title {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+#change-dsize-btn {
+    cursor: pointer;
+    background-color: #99C24D;
+    color: #F0F0F0;
+}
+
+#change-dsize-btn:hover {
+    opacity: 0.8;
+}
+
+/************ Map + Timeline histogram visualization CSS*/
+#map-leg-his {
+    border: 1px solid #CFCFCF;
+    border-left: none;
+    border-right: none;
+}
+
+.map path {
+    fill: #F0F0F0;
+    stroke: #CFCFCF;
+}
+
+.map path:hover {
+    fill: red;
+}
+
+#his {
+    border-top: 1px solid #CFCFCF;
+}
+
+.hist-bar {
+    fill: #ADCAD6;
+}
+
+.hist-bar.selected {
+    fill: #006E90;
+}
+
+/************ Legend CSS */
+div#leg-wrapper {
+    /* border-top: 1px solid #CFCFCF; */
+    display: flex;
+    justify-content: center;
+}
+
+table#race-legend {
+    align-self: center;
+}
+
+table.legend {
+    table-layout: fixed;
+}
+
+table.legend td {
+    width: 2%;
+}
+
+table#race-legend .legend-title {
+    font: 14px sans-serif;
+}
+
+table#race-legend .legend-title-sub {
+    font: 10px sans-serif;
+    color: #777;
+}
+
+table#race-legend .legend-handles {
+    height: 10px;
+    cursor: pointer;
+}
+
+table#race-legend .legend-labels {
+    text-align: center;
+    font-size: 0.6em;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/************ Bar Chart + Scatter plot CSS */
+#barc-sca {
+    border: 1px solid #CFCFCF;
+    border-radius: 0 10px 10px 0;
+}
+
+.barc-bar {
+    fill: #ADCAD6;
+}
+
+.barc-bar-year {
+    fill: #006E90;
+}
+
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+#sca {
+    border-top: 1px solid #CFCFCF;
+}
+
+.sca-plot-dot {
+    fill: #006E90;
+}
+
+/************ Home zoom, remove points, remove edges buttons CSS */
+image.home-zoom,
+image.remove-points,
+image.remove-lines {
+    opacity: 0.7;
+}
+
+image.home-zoom:hover,
+image.remove-points:hover,
+image.remove-lines:hover {
+    opacity: 1.0;
+}
+
+/* Input+Button CSS */
+.input,
+.submit {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.input {
+    border: 1px solid lightgray;
+}
+
+.submit {
+    background-color: #ADCAD6;
+    border: 1px solid transparent;
+    color: #FFF;
+}
+
+.submit::-moz-focus-inner {
+    border: 0;
+}
+
+.submit:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Sliders CSS */
+#his-slider-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.slidecontainer {
+    width: 100%;
+    margin-left: 41px;
+    margin-right: 19px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #006E90;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #006E90;
+    cursor: pointer;
+}
